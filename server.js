@@ -43,6 +43,13 @@ app.get("/about", (req, res) => {
         section:'This is a section'
     });
 });
+app.get("/project", (req, res) => {
+    res.render('project.hbs',{
+        title:'This is the projects page',
+        section:'Project one \nProject Two'
+    });
+});
+
 
 app.get("/bad", (req, res) => {
     res.statusCode = 500;
